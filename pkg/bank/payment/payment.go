@@ -11,6 +11,7 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 	for _, card := range cards {
 		if card.Balance < 0 || !card.Active {
 			continue
+		} else {
 		}
 
 	}

@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	cards := []types.Card{
+	var cards = []types.Card{
+
 		{
 			PAN:     "5058 xxxx xxxx 0001",
 			Balance: 10_000_00,
@@ -16,7 +17,7 @@ func main() {
 		{
 			PAN:     "5058 xxxx xxxx 1010",
 			Balance: 20_000_00,
-			Active:  true,
+			Active:  false,
 		},
 		{
 			PAN:     "5058 xxxx xxxx 8888",
@@ -24,7 +25,9 @@ func main() {
 			Active:  true,
 		},
 	}
+
 	result := payment.PaymentSources(cards)
 
 	fmt.Println(result)
+
 }
