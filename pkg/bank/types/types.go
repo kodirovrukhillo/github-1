@@ -17,7 +17,7 @@ const (
 type PAN string
 
 type PaymentSource struct {
-	PAN     PAN
+	PAN     string
 	Balance Money
 }
 

@@ -10,29 +10,28 @@ func main() {
 	var cards = []types.Card{
 
 		{
-			Number:  "5058 xxxx xxxx 0001",
+			PAN:     "5058 xxxx xxxx 0000",
 			Balance: 10_000_00,
 			Active:  true,
 		},
 		{
-			Number:  "5058 xxxx xxxx 1010",
+			PAN:     "5058 xxxx xxxx 1111",
 			Balance: 20_000_00,
 			Active:  false,
 		},
 		{
-			Number:  "5058 xxxx xxxx 8888",
+			PAN:     "5058 xxxx xxxx 9999",
 			Balance: -10_000_00,
 			Active:  true,
 		},
 		{
-			Number:  "5058 xxxx xxxx 8888",
+			PAN:     "5058 xxxx xxxx 8888",
 			Balance: 10_000_00,
 			Active:  true,
 		},
 	}
 
 	result := payment.PaymentSources(cards)
-
 	fmt.Println(result)
 
 }

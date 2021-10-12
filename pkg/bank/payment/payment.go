@@ -8,6 +8,7 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 
 	var payment []types.PaymentSource
 	// loop range
+
 	for _, card := range cards {
 		if card.Balance < 0 || !card.Active {
 			continue
@@ -18,6 +19,7 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 	return payment
 
 }
+
 func IssueCard(currency types.Currency, color string, name string) types.Card {
 	card := types.Card{
 
