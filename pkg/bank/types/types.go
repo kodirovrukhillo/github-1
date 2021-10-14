@@ -20,6 +20,10 @@ type PaymentSource struct {
 	PAN     string
 	Balance Money
 }
+type Pay struct {
+	PAN     string
+	Balance Money
+}
 
 type Payment struct {
 	ID     int
@@ -29,7 +33,7 @@ type Payment struct {
 //Car shows the card issue infomations
 type Card struct {
 	ID         int
-	PAN        PAN
+	PAN        string
 	Balance    Money
 	Currency   Currency
 	Color      string
