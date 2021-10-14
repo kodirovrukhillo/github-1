@@ -1,4 +1,4 @@
-package payment
+package card
 
 import (
 	"bank/pkg/bank/types"
@@ -9,7 +9,7 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 	for _, card := range cards {
 		if card.Active && card.Balance > 0 {
 			paymentSources = append(paymentSources, types.PaymentSource{
-				Type: "card", PAN: card.PAN, Balance: card.Balance})
+				Type: "card", Number: card.PAN, Balance: card.Balance})
 		}
 	}
 	return paymentSources

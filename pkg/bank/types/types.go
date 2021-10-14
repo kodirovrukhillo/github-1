@@ -18,11 +18,7 @@ type PAN string
 
 type PaymentSource struct {
 	Type    string
-	PAN     string
-	Balance Money
-}
-type Pay struct {
-	PAN     string
+	Number  string
 	Balance Money
 }
 

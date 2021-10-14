@@ -1,4 +1,4 @@
-package payment
+package card
 
 import (
 	"bank/pkg/bank/types"
@@ -24,8 +24,8 @@ func ExamplePaymentSource() {
 		},
 	}
 	result := PaymentSources(cards)
-	fmt.Println(result[0].PAN)
+	fmt.Println(result[0].Number, result[0].Balance)
 	// Output:
-	// 5058 xxxx xxxx 8888
+	// 5058 xxxx xxxx 8888 1000000
 
 }
