@@ -5,28 +5,14 @@ import (
 )
 
 func PaymentSources(cards []types.Card) []types.PaymentSource {
-
-	// loop range
-	var payment []types.PaymentSource
+	var paymentSources []types.PaymentSource
 	for _, card := range cards {
-
-		if card.Balance < 0 || !card.Active {
-			continue
-		} else {
-			for i := 0; i < len(payment); i++ {
-
-				pay := types.PaymentSource{
-					PAN:     card.PAN,
-					Balance: card.Balance,
-				}
-				payment = append(payment, pay)
-				return payment
-
-			}
-
+		if card.Active && card.Balance > 0 {
+			paymentSources = append(paymentSources, types.PaymentSource{
+				Type: "card", PAN: card.PAN, Balance: card.Balance})
 		}
 	}
-	return payment
+	return paymentSources
 }
 
 func IssueCard(currency types.Currency, color string, name string) types.Card {

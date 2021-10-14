@@ -24,7 +24,7 @@ func ExamplePaymentSource() {
 		},
 	}
 	result := PaymentSources(cards)
-	fmt.Println(result)
+	fmt.Println(result[0].PAN)
 	// Output:
 	// 5058 xxxx xxxx 8888
 

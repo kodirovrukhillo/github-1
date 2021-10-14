@@ -32,6 +32,6 @@ func main() {
 	}
 
 	result := payment.PaymentSources(cards)
-	fmt.Println(result)
+	fmt.Println(result[0].PAN)
 
 }
